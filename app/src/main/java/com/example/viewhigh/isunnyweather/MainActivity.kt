@@ -1,4 +1,4 @@
-`package com.example.viewhigh.isunnyweather
+package com.example.viewhigh.isunnyweather
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
