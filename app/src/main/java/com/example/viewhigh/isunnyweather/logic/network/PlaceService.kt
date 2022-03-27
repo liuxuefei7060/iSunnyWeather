@@ -10,12 +10,4 @@ interface PlaceService {
 
     @GET("v2/place?token=${App.TOKEN}&lang=zh_CN")
     fun searchPlaces(@Query("query") query: String): Call<PlaceResponse>
-
-    @FormUrlEncoded
-    @POST("webservices/login")
-    suspend fun login3(
-        @Field("account") name: String,
-        @Field("password") password: String,
-        @Field("loginType") loginType: String,
-        @Field("clientId") clientId: String): LoginInfo
 }

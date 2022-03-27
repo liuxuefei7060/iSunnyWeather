@@ -9,7 +9,7 @@ class App : Application() {
 
     companion object {
         //彩云天气的令牌
-        const val TOKEN = ""
+        const val TOKEN = "T3Gk1vOWpM1MCRPU"
 
         @SuppressLint("StaticFieldLeak")
         lateinit var context: Context

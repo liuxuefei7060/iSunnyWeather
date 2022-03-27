@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ServiceCreator {
 
-    private const val BASE_URL = "http://10.0.22.102/OES/"
+    private const val BASE_URL = "https://api.caiyunapp.com/"
 
     private val okHttpClient: OkHttpClient = OkHttpClient.Builder()
         .addNetworkInterceptor(HttpLoggingInterceptor(HttpLog()).also {

@@ -7,14 +7,16 @@ import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
 
+/**
+ * 统一的网络数据源访问入口，对所有网络请求的API进行封装
+ */
 object SunnyWeatherNetwork {
 
     private val placeService = ServiceCreator.create<PlaceService>()
 
     suspend fun searchPlaces(query: String) = placeService.searchPlaces(query).await()
 
-    //    login3("gyl", "1", "1", "sfa")
-    suspend fun login3() = placeService.login3("gyl", "1", "1", "sfa")
+
 
 
     private suspend fun <T> Call<T>.await(): T {

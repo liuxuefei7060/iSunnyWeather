@@ -14,7 +14,7 @@ import com.example.viewhigh.isunnyweather.databinding.FragmentPlaceBinding
 
 class PlaceFragment : Fragment() {
 
-    private val viewModel by lazy { ViewModelProvider(this).get(PlaceViewModel::class.java) }
+    private val viewModel by lazy { ViewModelProvider(this)[PlaceViewModel::class.java] }
 
     private lateinit var binding: FragmentPlaceBinding
 
@@ -51,9 +51,9 @@ class PlaceFragment : Fragment() {
             }
         }
 
-        binding.test.setOnClickListener {
-            viewModel.login3()
-        }
+//        binding.test.setOnClickListener {
+//            viewModel.searchPlaces("北京")
+//        }
 
         viewModel.placeLiveData.observe(viewLifecycleOwner, Observer { result ->
             val places = result.getOrNull()

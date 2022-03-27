@@ -8,9 +8,7 @@ import kotlinx.coroutines.Dispatchers
 
 object Repository {
 
-    suspend fun login3(): LoginInfo {
-        return SunnyWeatherNetwork.login3()
-    }
+
 
     fun searchPlaces(query: String) =
         liveData(Dispatchers.IO) {
