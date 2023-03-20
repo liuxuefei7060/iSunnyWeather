@@ -36,6 +36,8 @@ android {
 }
 
 dependencies {
+//    implementation 'androidx.core:core-ktx:1.9.0-alpha02'
+
     api 'com.orhanobut:logger:2.2.0'
     //网络 retrofit config
     implementation "com.squareup.retrofit2:retrofit:${depsVersion.retrofit}"
