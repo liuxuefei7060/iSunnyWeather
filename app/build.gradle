@@ -16,10 +16,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        config {
+            storeFile file("${rootProject.rootDir.absolutePath}${File.separator}liuxuefei.jks")
+            storePassword '123456'
+            keyAlias 'liuxuefeidev'
+            keyPassword '123456'
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     compileOptions {
@@ -42,6 +53,7 @@ dependencies {
     //网络 retrofit config
     implementation "com.squareup.retrofit2:retrofit:${depsVersion.retrofit}"
     implementation "com.squareup.retrofit2:converter-gson:${depsVersion.retrofit}"
+    implementation "com.google.code.gson:gson:2.8.7"
     debugApi "com.github.chuckerteam.chucker:library:3.5.2"
     releaseApi "com.github.chuckerteam.chucker:library-no-op:3.5.2"
     //网络  okhttp
